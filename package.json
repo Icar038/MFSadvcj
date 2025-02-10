@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@djpfs/react-vlibras": "^2.0.2",
     "@material-tailwind/react": "^2.1.10",
     "axios": "^1.7.9",
     "phosphor-react": "^1.4.1",

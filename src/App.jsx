@@ -9,12 +9,13 @@ import Interns from "./pages/Interns";
 import Contact from "./pages/Contact";
 import ChatBot from "./components/chatbot";
 import Acessibilidade from "./components/Acessibilidade";
+import VLibras from "@djpfs/react-vlibras"
 
 const App = () => {
     return (
         <Router>
             <Header />
-            <Acessibilidade/>
+            <VLibras/>
             <main className="pt-20">
                 <Routes>
                     <Route path="/" element={<Home />} />
