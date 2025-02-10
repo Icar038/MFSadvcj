@@ -15,7 +15,7 @@ const App = () => {
     return (
         <Router>
             <Header />
-            <VLibras/>
+            <VLibras forceOnload={true} />
             <main className="pt-20">
                 <Routes>
                     <Route path="/" element={<Home />} />
