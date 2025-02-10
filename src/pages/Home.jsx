@@ -84,9 +84,11 @@ const Home = () => {
             <div>
               <h2 className="titlesection">Sobre nosso escritorio</h2>
               <p className="text-gray-600 mb-6">
-                With decades of combined experience, our team of dedicated legal professionals
-                is committed to providing exceptional service and achieving the best possible
-                outcomes for our clients across Brazil.
+              Fundado em 2022, nosso escritório de advocacia tem se destacado pela excelência, comprometimento e resultados positivos para nossos clientes. Desde o início de nossa trajetória, conquistamos êxito em diversas causas, sempre pautados pela ética, transparência e um atendimento personalizado.
+
+Localizado em Salvador, na R. São Marcos, 73 - São Marcos, buscamos oferecer soluções jurídicas eficientes e estratégicas, garantindo a melhor defesa dos interesses de nossos clientes. Nossa reputação é fortalecida pelas recomendações e pela confiança que conquistamos ao longo dos anos, resultado de um trabalho sério e dedicado.
+
+Seja qual for a sua necessidade jurídica, estamos preparados para oferecer suporte especializado e eficaz. Conte com a nossa experiência para proteger seus direitos e alcançar os melhores resultados.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-50 p-4 rounded-lg">

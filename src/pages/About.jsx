@@ -33,6 +33,23 @@ Seja qual for a sua necessidade jurídica, estamos preparados para oferecer supo
           </div>
         </div>
       </section>
+      {/* About Section */}
+      <section id="about" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="titlesection">Sobre nosso escritorio</h2>
+              <p className="text-gray-600 mb-6">
+                With decades of combined experience, our team of dedicated legal professionals
+                is committed to providing exceptional service and achieving the best possible
+                outcomes for our clients across Brazil.
+              </p>
+             
+              
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

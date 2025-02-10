@@ -18,7 +18,6 @@ const Header = () => {
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
-        
     };
 
     return (
@@ -43,10 +42,13 @@ const Header = () => {
                     </div>
                 </div>
             )}
+
             <div className={`w-full ${isScrolled ? "" : "border-b border-blue-950"}`}>
                 <div className={`max-w-6xl mx-auto px-6 flex justify-between items-center ${
                     isScrolled ? "py-4" : "py-8"
                 }`}>
+                    
+                    {/* Logo e Nome */}
                     <div className="flex items-center">
                         <img src={isScrolled ? logoRolagem : logoInicial} alt="Logo" className="h-10 mr-2 transition-all duration-300" />
                         <span className={`font-bold text-lg transition-all duration-300 ${
@@ -55,22 +57,24 @@ const Header = () => {
                             Marques França e Santos
                         </span>
                     </div>
-                    <button className="md:hidden text-white" onClick={toggleMenu}>
-                        ☰
+
+                    {/* Botão de abrir/fechar menu no mobile */}
+                    <button className="md:hidden text-white text-2xl" onClick={toggleMenu}>
+                        {isMenuOpen ? "✖" : "☰"}
                     </button>
-                    <nav className={`md:flex ${isMenuOpen ? "block" : "hidden"} md:block`}>
-                        <ul className={`flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 transition-all duration-300 ${
-                            isScrolled ? "text-white" : "text-[#C4A05E]"
-                        }`}>
-                            <li><Link to="/">Início</Link></li>
-                            <li><Link to="/about">Sobre</Link></li>
-                            <li><Link to="/services">Serviços</Link></li>
-                            <li><Link to="/lawyers">Advogados</Link></li>
-                            <li><Link to="/interns">Estágio</Link></li>
-                            <li><Link to="/contact">Contato</Link></li>
+
+                    {/* Navegação: Normal no desktop, abaixo da logo no mobile */}
+                    <nav className={`md:flex ${isMenuOpen ? "absolute top-full left-0 w-full bg-blue-950 text-white py-4" : "hidden"} md:block md:relative md:bg-transparent`}>
+                        <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-white text-center md:text-left">
+                            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Início</Link></li>
+                            <li><Link to="/services" onClick={() => setIsMenuOpen(false)}>Serviços</Link></li>
+                            <li><Link to="/lawyers" onClick={() => setIsMenuOpen(false)}>Advogados</Link></li>
+                            <li><Link to="/interns" onClick={() => setIsMenuOpen(false)}>Estágio</Link></li>
+                            <li><Link to="/contact" onClick={() => setIsMenuOpen(false)}>Contato</Link></li>
                         </ul>
                     </nav>
-                    </div>
+
+                </div>
             </div>
         </header>
     );
